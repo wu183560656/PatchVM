@@ -1,0 +1,9 @@
+cd edk2
+edksetup.bat
+edksetup.bat rebuild
+cd ..
+
+
+build -p PatchHyperV.dsc -m PatchHyperV.inf -a X64 -b DEBUG
+
+build -p PatchHyperV.dsc -m PatchHyperV.inf -a X64 -b RELEASE

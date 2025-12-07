@@ -1,0 +1,28 @@
+[Defines]
+  INF_VERSION = 1.25
+  BASE_NAME = PatchHyperV
+  FILE_GUID = 803199F9-5E35-906D-F56C-5A3597C60486
+  MODULE_TYPE = UEFI_APPLICATION
+  VERSION_STRING = 1.0
+  ENTRY_POINT = UefiMain
+[Sources]
+  UefiMain.c
+  ../src/vmhandle.c
+ 
+[Packages]
+  MdePkg/MdePkg.dec
+ 
+[LibraryClasses]
+  UefiApplicationEntryPoint
+  UefiLib
+  BaseMemoryLib
+ 
+[Guids]
+ 
+[Ppis]
+ 
+[Protocols]
+ 
+[FeaturePcd]
+ 
+[Pcd]
