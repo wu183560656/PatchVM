@@ -31,7 +31,7 @@
 
 #include "apic.h"
 
-#include "../../SRC/vmhandle.h"
+#include "../../../SRC/vmhandle.h"
 
 #ifndef DEBUG
 #define sendstringf(s,x...)
@@ -2982,5 +2982,5 @@ void displayPhysicalMemory(void)
   unmapPhysicalMemory(memory, nrofbytes);
 }
 
-#include "../../SRC/vmhandle.c"
-#include "../../SRC/vmhandle_dbvm.c"
+#include "../../../SRC/vmhandle.c"
+#include "../../../SRC/vmhandle_dbvm.c"

@@ -35,7 +35,7 @@
 #include "luahandler.h"
 #include "interrupthandler.h"
 
-#include "../../SRC/vmhandle_dbvm.h"
+#include "../../../SRC/vmhandle_dbvm.h"
 
 //#include "psod.h" //for pink screen of death support
 
