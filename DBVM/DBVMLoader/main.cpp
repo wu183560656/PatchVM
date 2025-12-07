@@ -55,11 +55,11 @@ int wmain(const int argc, wchar_t** argv)
 			else
 				module_file_name[i] = L'\0';
 		}
-		std::wstring driver_path = std::wstring(module_file_name) + L"Loader.sys";
+		std::wstring driver_path = std::wstring(module_file_name) + L"DBVMLoaderDrv.sys";
 		std::wstring hvm_path = std::wstring(module_file_name) + L"vmdisk.img";
 		if (!fileExists(driver_path))
 		{
-			std::wcout << "Loader.sys not found in " << driver_path.c_str() << "\n";
+			std::wcout << "DBVMLoaderDrv.sys not found in " << driver_path.c_str() << "\n";
 			break;
 		}
 		if (!fileExists(hvm_path))

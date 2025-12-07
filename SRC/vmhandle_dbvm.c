@@ -1,14 +1,8 @@
 #include "vmhandle.h"
-#include "main.h"
+#include "../DBVM/dbvm/vmm/main.h"
+#include "../DBVM/dbvm/vmm/mm.h"
 
 static unsigned long long g_VirutalMemoryBase = 0;
-void *malloc2(unsigned int size);
-void zeromemory(volatile void *address, unsigned int size);
-void* mapPhysicalMemory(unsigned long long PhysicalAddress, unsigned int size);
-void unmapPhysicalMemory(void* address, unsigned int size);
-UINT64 VirtualToPhysical(void* address);
-extern UINT64 getCR3(void);
-extern ULONG setCR3(UINT64 newcr3);
 // 获取虚拟地址
 void* GetVirtualForPhysical(unsigned long long PhysicalAddress, unsigned long long* pByteCount)
 {

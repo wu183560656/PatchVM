@@ -1,14 +1,84 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
     <Filter Include="DBKKernel">
       <UniqueIdentifier>{7fcb4ce2-dd1e-42f0-84e2-6fe4b18fa24f}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.c" />
+    <ClCompile Include="DBKKernel\ultimap2\apic.c">
+      <Filter>DBKKernel</Filter>
+    </ClCompile>
+    <ClCompile Include="DBKKernel\DBKFunc.c">
+      <Filter>DBKKernel</Filter>
+    </ClCompile>
+    <ClCompile Include="DBKKernel\debugger.c">
+      <Filter>DBKKernel</Filter>
+    </ClCompile>
+    <ClCompile Include="DBKKernel\deepkernel.c">
+      <Filter>DBKKernel</Filter>
+    </ClCompile>
+    <ClCompile Include="DBKKernel\interruptHook.c">
+      <Filter>DBKKernel</Filter>
+    </ClCompile>
+    <ClCompile Include="DBKKernel\IOPLDispatcher.c">
+      <Filter>DBKKernel</Filter>
+    </ClCompile>
+    <ClCompile Include="DBKKernel\kfiles.c">
+      <Filter>DBKKernel</Filter>
+    </ClCompile>
+    <ClCompile Include="DBKKernel\memscan.c">
+      <Filter>DBKKernel</Filter>
+    </ClCompile>
+    <ClCompile Include="DBKKernel\noexceptions.c">
+      <Filter>DBKKernel</Filter>
+    </ClCompile>
+    <ClCompile Include="DBKKernel\processlist.c">
+      <Filter>DBKKernel</Filter>
+    </ClCompile>
+    <ClCompile Include="DBKKernel\tdiwrapper.c">
+      <Filter>DBKKernel</Filter>
+    </ClCompile>
+    <ClCompile Include="DBKKernel\threads.c">
+      <Filter>DBKKernel</Filter>
+    </ClCompile>
+    <ClCompile Include="DBKKernel\ultimap.c">
+      <Filter>DBKKernel</Filter>
+    </ClCompile>
+    <ClCompile Include="DBKKernel\ultimap2.c">
+      <Filter>DBKKernel</Filter>
+    </ClCompile>
+    <ClCompile Include="DBKKernel\vmxhelper.c">
+      <Filter>DBKKernel</Filter>
+    </ClCompile>
+    <ClCompile Include="DBKKernel\vmxoffload.c">
+      <Filter>DBKKernel</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <MASM Include="DBKKernel\amd64\dbkfunca.asm">
+      <Filter>DBKKernel</Filter>
+    </MASM>
+    <MASM Include="DBKKernel\amd64\debuggera.asm">
+      <Filter>DBKKernel</Filter>
+    </MASM>
+    <MASM Include="DBKKernel\amd64\noexceptionsa.asm">
+      <Filter>DBKKernel</Filter>
+    </MASM>
+    <MASM Include="DBKKernel\amd64\ultimapa.asm">
+      <Filter>DBKKernel</Filter>
+    </MASM>
+    <MASM Include="DBKKernel\amd64\vmxhelpera.asm">
+      <Filter>DBKKernel</Filter>
+    </MASM>
+    <MASM Include="DBKKernel\amd64\vmxoffloada.asm">
+      <Filter>DBKKernel</Filter>
+    </MASM>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config">
+      <Filter>DBKKernel</Filter>
+    </None>
   </ItemGroup>
 </Project>
