@@ -650,6 +650,11 @@ static int OnExecuteVmcall(CPU_DATA* pCpuData, unsigned int Command, void* Data,
 	*pWriteBack = 0;
 	switch (Command)
 	{
+	case VMCALL_EXIST:
+	{
+
+		return 1; //存在
+	}
 	case VMCALL_CHANGE_PASSWORD:
 	{
 		if (DataSize >= sizeof(CHANGE_PASSWORD_DATA))
@@ -842,9 +847,9 @@ static int OnExecuteVmcall(CPU_DATA* pCpuData, unsigned int Command, void* Data,
 	break;
 	case VMCALL_GET_PAGE_EXECUTE_PFN:
 	{
-		if (DataSize >= sizeof(SET_PAGE_EXECUTE_PFN_DATA))
+		if (DataSize >= sizeof(GET_PAGE_EXECUTE_PFN_DATA))
 		{
-			SET_PAGE_EXECUTE_PFN_DATA* pGetPageExecutePfnData = (SET_PAGE_EXECUTE_PFN_DATA*)Data;
+			GET_PAGE_EXECUTE_PFN_DATA* pGetPageExecutePfnData = (GET_PAGE_EXECUTE_PFN_DATA*)Data;
 			SpinLock(&_PageHookListLock);
 			{
 				unsigned long long Pfn = pGetPageExecutePfnData->Pfn;
@@ -938,6 +943,7 @@ int VMXExitBefore(CONTEXT* Context)
 		}
 	}
 	break;
+	case 10:  //ExecuteCpuid
 	case 18:  //ExecuteVmcall
 	{
 		char Buffer[0x100];
@@ -1086,6 +1092,7 @@ int SVMExitBefore(VMCB* pVMCB, CONTEXT* Context)
 		}
 	}
 	break;
+	case 0x72:  	//ExecuteCpuid
 	case 0x81:      //ExecuteVmcall
 	{
 		char Buffer[0x100];
